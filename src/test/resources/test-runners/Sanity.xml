@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Sanity Suite">
+	<listeners>
+		<listener class-name="org.opencart.listeners.ListenersClass"></listener>
+	</listeners>
+  <test thread-count="5" name="LoginLogoutRegistration">
+    <classes>
+      <class name="org.opencart.tests.LoginLogoutRegistration"/>
+    </classes>
+  </test> <!-- Login Logout and Registation Scenario -->
+</suite> <!-- Sanity Suite -->
