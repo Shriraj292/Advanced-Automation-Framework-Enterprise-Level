@@ -1,5 +1,6 @@
 package org.opencart.driverutils;
 
+import java.net.MalformedURLException;
 import java.util.Objects;
 
 import org.opencart.enums.ConfigProperties;
@@ -11,30 +12,27 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public final class Driver {
 
-    private Driver() {}
+	private Driver() {
+	}
 
-    public static void initializeDriver(String browser){
-       if (Objects.isNull(DriverManager.getDriver())){
-    	   WebDriver driver = null;
-    	   
-    	   if (browser.equalsIgnoreCase("chrome")) {
-				driver = new ChromeDriver();
-			}else if (browser.equalsIgnoreCase("firefox")) {
-				driver = new FirefoxDriver();
-			}else if (browser.equalsIgnoreCase("msedge")){
-				driver = new EdgeDriver();
+	public static void initializeDriver(String browser, String version) {
+		if (Objects.isNull(DriverManager.getDriver())) {
+			WebDriver driver;
+			try {
+				driver = DriverFactory.getDriver(browser, version);
+			} catch (MalformedURLException e) {
+				throw new RuntimeException("Browser initialization failed.");
 			}
-    	   
-    	   DriverManager.setDriver(driver);
-           DriverManager.getDriver().manage().window().maximize();
-           DriverManager.getDriver().get(PropertyUtilities.getPropertyValue(ConfigProperties.URL));
-       }
-    }
+			DriverManager.setDriver(driver);
+			DriverManager.getDriver().manage().window().maximize();
+			DriverManager.getDriver().get(PropertyUtilities.getPropertyValue(ConfigProperties.URL));
+		}
+	}
 
-    public static void quitDriver(){
-        if (Objects.nonNull(DriverManager.getDriver())){
-            DriverManager.getDriver().quit();
-            DriverManager.unload();
-        }
-    }
+	public static void quitDriver() {
+		if (Objects.nonNull(DriverManager.getDriver())) {
+			DriverManager.getDriver().quit();
+			DriverManager.unload();
+		}
+	}
 }
