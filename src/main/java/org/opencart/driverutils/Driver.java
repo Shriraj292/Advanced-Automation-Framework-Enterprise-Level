@@ -4,11 +4,9 @@ import java.net.MalformedURLException;
 import java.util.Objects;
 
 import org.opencart.enums.ConfigProperties;
+import org.opencart.exceptions.BrowserInitializationFailedException;
 import org.opencart.utilities.PropertyUtilities;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 public final class Driver {
 
@@ -21,7 +19,9 @@ public final class Driver {
 			try {
 				driver = DriverFactory.getDriver(browser, version);
 			} catch (MalformedURLException e) {
-				throw new RuntimeException("Browser initialization failed.");
+				throw new BrowserInitializationFailedException(
+						"Browser initialization failed due to some reason. (Browser version can be one of the possible cause. Please check browser version in excel file.)",
+						e);
 			}
 			DriverManager.setDriver(driver);
 			DriverManager.getDriver().manage().window().maximize();

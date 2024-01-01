@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.opencart.enums.ConfigProperties;
+import org.opencart.exceptions.InvalidBrowserException;
 import org.opencart.utilities.PropertyUtilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -43,7 +44,7 @@ public final class DriverFactory {
 			}
 
 			default: {
-				throw new RuntimeException("Invalid browser value. Please check TestData.xlsx file.");
+				throw new InvalidBrowserException("Invalid browser value. Please check TestData.xlsx file.");
 			}
 
 			}
@@ -66,9 +67,9 @@ public final class DriverFactory {
 				driver = new EdgeDriver();
 				break;
 			}
-			
-			default:{
-				throw new RuntimeException("Invalid browser value. Please check TestData.xlsx file.");
+
+			default: {
+				throw new InvalidBrowserException("Invalid browser value. Please check TestData.xlsx file.");
 			}
 			}
 		}
