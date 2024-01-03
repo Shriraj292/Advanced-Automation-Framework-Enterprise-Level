@@ -45,3 +45,23 @@ services:
       - "4442:4442"
       - "4443:4443"
       - "4444:4444"
+
+  chrome_video:
+    image: selenium/video:ffmpeg-6.1-20231219
+    volumes:
+      - ./recording-videos:/videos
+    depends_on:
+      - chrome
+    environment:
+      - DISPLAY_CONTAINER_NAME=chrome
+      - FILE_NAME=chrome_video.mp4
+
+  firefox_video:
+    image: selenium/video:ffmpeg-6.1-20231219
+    volumes:
+      - ./recording-videos:/videos
+    depends_on:
+      - firefox
+    environment:
+      - DISPLAY_CONTAINER_NAME=firefox
+      - FILE_NAME=firefox_video.mp4
