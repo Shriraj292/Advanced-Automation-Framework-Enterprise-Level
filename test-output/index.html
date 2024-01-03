@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Sanity_Suite" class="navigator-link">
-              <span class="suite-name border-failed">Sanity Suite</span>
+              <span class="suite-name border-passed">Sanity Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,36 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 4 failed,   2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Sanity_Suite" class="hide-methods failed suite-Sanity_Suite"> (hide)</a> <!-- hide-methods failed suite-Sanity_Suite -->
-                      <a href="#" panel-name="suite-Sanity_Suite" class="show-methods failed suite-Sanity_Suite"> (show)</a> <!-- show-methods failed suite-Sanity_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Sanity_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Sanity_Suite" title="org.opencart.tests.LoginLogoutRegistration" class="method navigator-link" hash-for-method="loginLogoutTest({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To ve...)">loginLogoutTest({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To ve...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Sanity_Suite" title="org.opencart.tests.LoginLogoutRegistration" class="method navigator-link" hash-for-method="loginLogoutTest({firstname=, password=, testcase name=loginLogoutTest, browser=chrome, description=To verify whether...)">loginLogoutTest({firstname=, password=, testcase name=loginLogoutTest, browser=chrome, description=To verify whether...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Sanity_Suite" title="org.opencart.tests.LoginLogoutRegistration" class="method navigator-link" hash-for-method="loginLogoutTest({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To ve...)">loginLogoutTest({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To ve...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Sanity_Suite" title="org.opencart.tests.LoginLogoutRegistration" class="method navigator-link" hash-for-method="registrationTest({firstname=Michel, password=Testpass@123, testcase name=registrationTest, browser=chrome, descriptio...)">registrationTest({firstname=Michel, password=Testpass@123, testcase name=registrationTest, browser=chrome, descriptio...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Sanity_Suite -->
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -137,7 +108,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Sanity_Suite" title="org.opencart.tests.LoginLogoutRegistration" class="method navigator-link" hash-for-method="registrationTest({firstname=Moshdada, password=Testpass@123, testcase name=registrationTest, browser=chrome, descript...)">registrationTest({firstname=Moshdada, password=Testpass@123, testcase name=registrationTest, browser=chrome, descript...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Sanity_Suite" title="org.opencart.tests.LoginLogoutRegistration" class="method navigator-link" hash-for-method="registrationTest({firstname=Tom, password=Testpass@123, testcase name=registrationTest, browser=Firefox, description=...)">registrationTest({firstname=Tom, password=Testpass@123, testcase name=registrationTest, browser=Firefox, description=...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Sanity_Suite -->
@@ -152,67 +123,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Sanity_Suite" class="panel Sanity_Suite">
-          <div class="suite-Sanity_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">org.opencart.tests.LoginLogoutRegistration</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginLogoutTest({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To ve...)">
-                  </a> <!-- loginLogoutTest({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To ve...) -->
-                  <span class="method-name">loginLogoutTest</span>
-                  <span class="parameters">({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To verify whether user is able to login with email field blank, telephone=, execute=Yes, email=, lastname=})</span>
-                  <div class="stack-trace">java.lang.AssertionError: Login unsuccessful. Please check credentials. expected [My Account] but found [Account Login]
-	at org.opencart.tests.LoginLogoutRegistration.loginLogoutTest(LoginLogoutRegistration.java:19)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 30 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginLogoutTest({firstname=, password=, testcase name=loginLogoutTest, browser=chrome, description=To verify whether...)">
-                  </a> <!-- loginLogoutTest({firstname=, password=, testcase name=loginLogoutTest, browser=chrome, description=To verify whether...) -->
-                  <span class="method-name">loginLogoutTest</span>
-                  <span class="parameters">({firstname=, password=, testcase name=loginLogoutTest, browser=chrome, description=To verify whether user is able to login with password field blank, telephone=, execute=Yes, email=coderanonymous07@gmail.com, lastname=})</span>
-                  <div class="stack-trace">java.lang.AssertionError: Login unsuccessful. Please check credentials. expected [My Account] but found [Account Login]
-	at org.opencart.tests.LoginLogoutRegistration.loginLogoutTest(LoginLogoutRegistration.java:19)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 30 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginLogoutTest({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To ve...)">
-                  </a> <!-- loginLogoutTest({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To ve...) -->
-                  <span class="method-name">loginLogoutTest</span>
-                  <span class="parameters">({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To verify login logout functionality with invalid credentials, telephone=, execute=Yes, email=xyzw@gmail.com, lastname=})</span>
-                  <div class="stack-trace">java.lang.AssertionError: Login unsuccessful. Please check credentials. expected [My Account] but found [Account Login]
-	at org.opencart.tests.LoginLogoutRegistration.loginLogoutTest(LoginLogoutRegistration.java:19)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 30 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="registrationTest({firstname=Michel, password=Testpass@123, testcase name=registrationTest, browser=chrome, descriptio...)">
-                  </a> <!-- registrationTest({firstname=Michel, password=Testpass@123, testcase name=registrationTest, browser=chrome, descriptio...) -->
-                  <span class="method-name">registrationTest</span>
-                  <span class="parameters">({firstname=Michel, password=Testpass@123, testcase name=registrationTest, browser=chrome, description=To verify whether user is able to register without entering email field, telephone=8888888888, execute=Yes, email=, lastname=Starc})</span>
-                  <div class="stack-trace">java.lang.AssertionError: Registration failed. expected [Your Account Has Been Created!] but found [Register Account]
-	at org.opencart.pages.RegisterAccountPage.verifyRegistrationStatus(RegisterAccountPage.java:48)
-	at org.opencart.tests.LoginLogoutRegistration.registrationTest(LoginLogoutRegistration.java:29)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 30 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Sanity_Suite-class-failed -->
           <div class="suite-Sanity_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -224,15 +134,15 @@
                   <a name="loginLogoutTest({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To ve...)">
                   </a> <!-- loginLogoutTest({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To ve...) -->
                   <span class="method-name">loginLogoutTest</span>
-                  <span class="parameters">({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To verify login logout functionality with valid credentials, telephone=, execute=Yes, email=coderanonymous07@gmail.com, lastname=})</span>
+                  <span class="parameters">({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To verify login logout functionality with valid credentials, telephone=, execute=Yes, version=120.0, email=coderanonymous07@gmail.com, lastname=})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="registrationTest({firstname=Moshdada, password=Testpass@123, testcase name=registrationTest, browser=chrome, descript...)">
-                  </a> <!-- registrationTest({firstname=Moshdada, password=Testpass@123, testcase name=registrationTest, browser=chrome, descript...) -->
+                  <a name="registrationTest({firstname=Tom, password=Testpass@123, testcase name=registrationTest, browser=Firefox, description=...)">
+                  </a> <!-- registrationTest({firstname=Tom, password=Testpass@123, testcase name=registrationTest, browser=Firefox, description=...) -->
                   <span class="method-name">registrationTest</span>
-                  <span class="parameters">({firstname=Moshdada, password=Testpass@123, testcase name=registrationTest, browser=chrome, description=To verify registration functionality with valid testdata, telephone=6576409789, execute=Yes, email=moshdada.hamedani@example.com, lastname=Hamedani})</span>
+                  <span class="parameters">({firstname=Tom, password=Testpass@123, testcase name=registrationTest, browser=Firefox, description=To verify registration functionality with valid testdata, telephone=6576409987, execute=Yes, version=120.0, email=tom.hanks1@gmail.com, lastname=Hanks})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -246,11 +156,12 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Sanity Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;suite configfailurepolicy=&quot;continue&quot; name=&quot;Sanity Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;org.opencart.listeners.ListenersClass&quot;/&gt;
+    &lt;listener class-name=&quot;org.opencart.listeners.MethodInterceptor&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;LoginLogoutRegistration&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;methods&quot; name=&quot;LoginLogoutRegistration&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;org.opencart.tests.LoginLogoutRegistration&quot;/&gt;
     &lt;/classes&gt;
@@ -292,36 +203,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginLogoutTest')
 data.setCell(0, 2, 'org.opencart.tests.LoginLogoutRegistration')
-data.setCell(0, 3, 20172);
+data.setCell(0, 3, 45669);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginLogoutTest')
+data.setCell(1, 1, 'registrationTest')
 data.setCell(1, 2, 'org.opencart.tests.LoginLogoutRegistration')
-data.setCell(1, 3, 9685);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'registrationTest')
-data.setCell(2, 2, 'org.opencart.tests.LoginLogoutRegistration')
-data.setCell(2, 3, 8781);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'registrationTest')
-data.setCell(3, 2, 'org.opencart.tests.LoginLogoutRegistration')
-data.setCell(3, 3, 6791);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'loginLogoutTest')
-data.setCell(4, 2, 'org.opencart.tests.LoginLogoutRegistration')
-data.setCell(4, 3, 5586);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'loginLogoutTest')
-data.setCell(5, 2, 'org.opencart.tests.LoginLogoutRegistration')
-data.setCell(5, 3, 5403);
+data.setCell(1, 3, 39619);
 window.suiteTableData['Sanity_Suite']= { tableData: data, tableDiv: 'times-div-Sanity_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 56 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Sanity_Suite">
               </div> <!-- times-div-Sanity_Suite -->
             </div> <!-- times-div -->
@@ -349,84 +244,28 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">org.opencart.tests.LoginLogoutRegistration</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup([{firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To v...)</span>
+                <span class="method-name">setup([{firstname=Tom, password=Testpass@123, testcase name=registrationTest, browser=Firefox, description...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">loginLogoutTest({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To ve...)</span>
-                <span class="method-start">7455 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">17147 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup([{firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To v...)</span>
-                <span class="method-start">17428 ms</span>
+                <span class="method-start">195 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">loginLogoutTest({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To ve...)</span>
-                <span class="method-start">24843 ms</span>
+                <span class="method-start">6930 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">46219 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup([{firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To v...)</span>
-                <span class="method-start">46509 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">loginLogoutTest({firstname=, password=Testpass@123, testcase name=loginLogoutTest, browser=chrome, description=To ve...)</span>
-                <span class="method-start">52487 ms</span>
+                <span class="method-name">registrationTest({firstname=Tom, password=Testpass@123, testcase name=registrationTest, browser=Firefox, description=...)</span>
+                <span class="method-start">29720 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">58976 ms</span>
+                <span class="method-start">52606 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup([{firstname=, password=, testcase name=loginLogoutTest, browser=chrome, description=To verify whethe...)</span>
-                <span class="method-start">59283 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">loginLogoutTest({firstname=, password=, testcase name=loginLogoutTest, browser=chrome, description=To verify whether...)</span>
-                <span class="method-start">65660 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">72131 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup([{firstname=Moshdada, password=Testpass@123, testcase name=registrationTest, browser=chrome, descrip...)</span>
-                <span class="method-start">72608 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">registrationTest({firstname=Moshdada, password=Testpass@123, testcase name=registrationTest, browser=chrome, descript...)</span>
-                <span class="method-start">79479 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">88262 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup([{firstname=Michel, password=Testpass@123, testcase name=registrationTest, browser=chrome, descripti...)</span>
-                <span class="method-start">88493 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">registrationTest({firstname=Michel, password=Testpass@123, testcase name=registrationTest, browser=chrome, descriptio...)</span>
-                <span class="method-start">94830 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">102514 ms</span>
+                <span class="method-start">69342 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
