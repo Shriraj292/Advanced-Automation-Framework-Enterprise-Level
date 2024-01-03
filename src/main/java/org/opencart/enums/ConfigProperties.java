@@ -1,10 +1,11 @@
 package org.opencart.enums;
 
 public enum ConfigProperties {
-    URL,
+	TESTMODE,
+	REMOTEURL,
+    APPLICATIONURL,
     ALLTESTS,
     ONLYFAILEDTESTS,
 	RETRYFAILEDTESTS,
-	RETRYCOUNT,
-	TESTMODE
+	RETRYCOUNT
 }

@@ -12,20 +12,21 @@ import org.openqa.selenium.TakesScreenshot;
 
 public final class ScreenshotUtils {
 
-	private ScreenshotUtils() {}
-	
+	private ScreenshotUtils() {
+	}
+
 	public static String getScreenshotPath() {
-		TakesScreenshot ts = (TakesScreenshot)(DriverManager.getDriver());
+		TakesScreenshot ts = (TakesScreenshot) (DriverManager.getDriver());
 		File srcFile = ts.getScreenshotAs(OutputType.FILE);
 		String screenshot = ts.getScreenshotAs(OutputType.BASE64);
-		File destFile = new File(FrameworkConstants.getScreenshotsFolderPath() + "/" + ReportsManager.getTimeStamp() + ".png");
+		File destFile = new File(
+				FrameworkConstants.getScreenshotsFolderPath() + "/" + ReportsManager.getTimeStamp() + ".png");
 		try {
 			FileUtils.copyFile(srcFile, destFile);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return screenshot;
 	}
 }

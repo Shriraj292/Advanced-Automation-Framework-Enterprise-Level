@@ -7,7 +7,6 @@ import java.util.Objects;
 
 import org.opencart.constants.FrameworkConstants;
 import org.opencart.enums.ConfigProperties;
-import org.opencart.exceptions.FileOperationsFailedException;
 import org.opencart.utilities.PropertyUtilities;
 
 import com.aventstack.extentreports.ExtentReports;

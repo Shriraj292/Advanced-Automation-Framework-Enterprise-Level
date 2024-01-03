@@ -5,7 +5,7 @@
 		<listener class-name="org.opencart.listeners.ListenersClass"/>
 		<listener class-name="org.opencart.listeners.MethodInterceptor"/>
 	</listeners>
-  <test thread-count="5" name="LoginLogoutRegistration">
+  <test thread-count="5" name="LoginLogoutRegistration" parallel="methods">
     <classes>
       <class name="org.opencart.tests.LoginLogoutRegistration"/>
     </classes>

@@ -11,33 +11,30 @@ import java.time.Duration;
 
 public final class ExplicitWaitFactory {
 
-    private ExplicitWaitFactory() {}
+	private ExplicitWaitFactory() {
+	}
 
-    public static WebElement explicitlyWaitFor(WaitStrategies strategy, By by){
-        WebElement element = null;
-        switch (strategy){
-            case PRESENCE_OF:
-            {
-                element = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(20))
-                        .until(ExpectedConditions.presenceOfElementLocated(by));
-            }
-            case VISIBILITY_OF:
-            {
-                element = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(20))
-                        .until(ExpectedConditions.visibilityOfElementLocated(by));
-            }
-            case CLICKABILITY_OF:
-            {
-                element = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(20))
-                        .until(ExpectedConditions.elementToBeClickable(by));
-            }
-            case NONE:
-            {
-                element = DriverManager.getDriver().findElement(by);
-            }
+	public static WebElement explicitlyWaitFor(WaitStrategies strategy, By by) {
+		WebElement element = null;
+		switch (strategy) {
+		case PRESENCE_OF: {
+			element = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(20))
+					.until(ExpectedConditions.presenceOfElementLocated(by));
+		}
+		case VISIBILITY_OF: {
+			element = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(20))
+					.until(ExpectedConditions.visibilityOfElementLocated(by));
+		}
+		case CLICKABILITY_OF: {
+			element = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(20))
+					.until(ExpectedConditions.elementToBeClickable(by));
+		}
+		case NONE: {
+			element = DriverManager.getDriver().findElement(by);
+		}
 
-        }
+		}
 
-        return element;
-    }
+		return element;
+	}
 }

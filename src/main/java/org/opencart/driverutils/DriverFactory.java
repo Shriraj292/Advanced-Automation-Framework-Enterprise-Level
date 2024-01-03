@@ -49,7 +49,7 @@ public final class DriverFactory {
 
 			}
 
-			driver = new RemoteWebDriver(new URL("http://localhost:4444"), cap);
+			driver = new RemoteWebDriver(new URL(PropertyUtilities.getPropertyValue(ConfigProperties.REMOTEURL)), cap);
 
 		} else if (testMode.equalsIgnoreCase("local")) {
 			switch (browser.toLowerCase()) {

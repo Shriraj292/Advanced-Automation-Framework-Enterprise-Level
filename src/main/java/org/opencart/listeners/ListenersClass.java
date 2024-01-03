@@ -47,7 +47,7 @@ public class ListenersClass implements ITestListener, ISuiteListener {
 		if (Objects.nonNull(DriverManager.getDriver())) {
 			ExtentLogger.fail(result.getMethod().getMethodName() + " failed.", true);
 			ExtentLogger.fail(result.getThrowable().toString(), true);
-		}else {
+		} else {
 			ExtentLogger.skip(result.getMethod().getMethodName() + " skipped.", false);
 		}
 	}

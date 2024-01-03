@@ -25,7 +25,7 @@ public final class Driver {
 			}
 			DriverManager.setDriver(driver);
 			DriverManager.getDriver().manage().window().maximize();
-			DriverManager.getDriver().get(PropertyUtilities.getPropertyValue(ConfigProperties.URL));
+			DriverManager.getDriver().get(PropertyUtilities.getPropertyValue(ConfigProperties.APPLICATIONURL));
 		}
 	}
 

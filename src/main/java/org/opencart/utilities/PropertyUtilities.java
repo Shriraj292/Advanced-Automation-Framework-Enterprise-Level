@@ -1,5 +1,11 @@
 package org.opencart.utilities;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Objects;
+import java.util.Properties;
+
 import org.opencart.constants.FrameworkConstants;
 import org.opencart.enums.ConfigProperties;
 import org.opencart.exceptions.FileOperationsFailedException;
@@ -7,12 +13,6 @@ import org.opencart.exceptions.InvalidPropertyFilePathException;
 import org.opencart.exceptions.InvalidPropertyKeyException;
 import org.opencart.exceptions.PropertyKeyNullException;
 import org.opencart.exceptions.PropertyValueEmptyException;
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Objects;
-import java.util.Properties;
 
 public final class PropertyUtilities {
 
