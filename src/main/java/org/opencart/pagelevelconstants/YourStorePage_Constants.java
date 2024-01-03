@@ -1,5 +1,12 @@
 package org.opencart.pagelevelconstants;
 
+/**
+ * YourStorePage_Constants contains enum variables and getter method to get the 
+ * value assigned to the variable. The variables are the constant web elements of 
+ * {@link org.opencart.pages.YourStorePage}
+ * 
+ * @author Shriraj Ghorpade
+ */
 public enum YourStorePage_Constants {
 	
 	MY_ACCOUNT("My Account"), //top-links below --------------------!

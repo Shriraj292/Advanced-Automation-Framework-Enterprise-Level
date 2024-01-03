@@ -10,8 +10,21 @@ import org.testng.IMethodInstance;
 import org.testng.IMethodInterceptor;
 import org.testng.ITestContext;
 
+/**
+ * MethodInterceptor class implements {@link IMethodInterceptor} and is
+ * responsible for identifying the executable tests based on the test data
+ * provided.
+ * 
+ * @author Shriraj Ghorpade
+ */
 public class MethodInterceptor implements IMethodInterceptor {
 
+	/**
+	 * This methods overrides intercept method of {@link IMethodInterceptor} class.
+	 * This method accepts the list of methods with @Test tag and identifies the
+	 * list of methods that are to be executed from excel data sheet. Test methods
+	 * which are part of this list are executed.
+	 */
 	@Override
 	public List<IMethodInstance> intercept(List<IMethodInstance> methods, ITestContext context) {
 		List<IMethodInstance> result = new ArrayList<IMethodInstance>();

@@ -8,12 +8,29 @@ import java.util.Map;
 import org.opencart.constants.FrameworkConstants;
 import org.testng.annotations.DataProvider;
 
+/**
+ * DataProviderUtilities contains method that supplies data to the test method.
+ * The data is extracted from the excel file.
+ * 
+ * @author Shriraj Ghorpade
+ * @see {@link ExcelUtilities}
+ */
 public final class DataProviderUtilities {
 	private DataProviderUtilities() {
 	}
 
 	private static List<Map<String, String>> list = new ArrayList<>();
 
+	/**
+	 * This method gets the list of tests from the Run Manager sheet for of test
+	 * data excel sheet. If the testcase is marked as "Yes" for execution, the list
+	 * of testcases having name same as caller method name. The list contains map of
+	 * header and value of particular header. This list is returned as array to the
+	 * test method.
+	 * 
+	 * @param m method that is calling data provider method
+	 * @return array of maps
+	 */
 	@DataProvider(name = "dataSupplier")
 	public static Object[] getData(Method m) {
 		String methodName = m.getName();

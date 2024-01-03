@@ -4,6 +4,12 @@ import org.opencart.utilities.ScreenshotUtils;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 
+/**
+ * ExtentLogger class is responsible for logging the test steps in extent
+ * report.
+ * 
+ * @author Shriraj Ghorpade
+ */
 public class ExtentLogger {
 
 	private static void pass(String message) {

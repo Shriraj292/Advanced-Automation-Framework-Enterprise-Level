@@ -15,6 +15,11 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.ViewName;
 
+/**
+ * ExtentReport class is responsible for initializing and flushing the reports.
+ * 
+ * @author Shriraj Ghorpade
+ */
 public final class ExtentReport {
 
 	private ExtentReport() {
@@ -24,6 +29,11 @@ public final class ExtentReport {
 	private static ExtentReports extent;
 	private static ExtentTest test;
 
+	/**
+	 * This method initializes extent reports
+	 * 
+	 * @throws IOException
+	 */
 	public static void initReports() throws IOException {
 		if (Objects.isNull(extent)) {
 			extent = new ExtentReports();
@@ -54,22 +64,35 @@ public final class ExtentReport {
 		}
 	}
 
+	/**
+	 * This method publishes extent reports and automatically opens reports in
+	 * default browser.
+	 * 
+	 * @throws IOException
+	 */
 	public static void flushReports() throws IOException {
 		if (Objects.nonNull(extent)) {
 			extent.flush();
 			ExtentReportManager.unload();
 
-			if (PropertyUtilities.getPropertyValue(ConfigProperties.ALLTESTS).equalsIgnoreCase("yes")) {
-				Desktop.getDesktop().browse(new File(FrameworkConstants.getAllTestsReportPath()).toURI());
-			}
+			if (PropertyUtilities.getPropertyValue(ConfigProperties.LAUNCHEXTENTREPORTS).equalsIgnoreCase("yes")) {
+				if (PropertyUtilities.getPropertyValue(ConfigProperties.ALLTESTS).equalsIgnoreCase("yes")) {
+					Desktop.getDesktop().browse(new File(FrameworkConstants.getAllTestsReportPath()).toURI());
+				}
 
-			if (PropertyUtilities.getPropertyValue(ConfigProperties.ONLYFAILEDTESTS).equalsIgnoreCase("yes")) {
-				Desktop.getDesktop().browse(new File(FrameworkConstants.getOnlyFailedTestsReportPath()).toURI());
+				if (PropertyUtilities.getPropertyValue(ConfigProperties.ONLYFAILEDTESTS).equalsIgnoreCase("yes")) {
+					Desktop.getDesktop().browse(new File(FrameworkConstants.getOnlyFailedTestsReportPath()).toURI());
+				}
 			}
 
 		}
 	}
 
+	/**
+	 * This method creates extent test for the testcase passed as argument.
+	 * 
+	 * @param testcaseName
+	 */
 	public static void createTest(String testcaseName) {
 		test = extent.createTest(testcaseName);
 		ExtentReportManager.setExtTest(test);

@@ -3,6 +3,11 @@ package org.opencart.reports;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * ReportsManager class generates reports folder and timestamp.
+ * 
+ * @author Shriraj Ghorpade
+ */
 public final class ReportsManager {
 
 	private ReportsManager() {

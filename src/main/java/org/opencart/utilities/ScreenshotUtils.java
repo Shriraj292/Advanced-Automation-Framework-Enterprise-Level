@@ -10,11 +10,23 @@ import org.opencart.reports.ReportsManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+/**
+ * ScreenshotUtils class is responsible for capturing the screenshot and storing
+ * in screenshots folder in test reports.
+ * 
+ * @author Shriraj Ghorpade
+ */
 public final class ScreenshotUtils {
 
 	private ScreenshotUtils() {
 	}
 
+	/**
+	 * This method captures the screenshot wherever called and returns BASE64 value of the
+	 * screenshot.
+	 * 
+	 * @return BASE64 string value of screenshot.
+	 */
 	public static String getScreenshotPath() {
 		TakesScreenshot ts = (TakesScreenshot) (DriverManager.getDriver());
 		File srcFile = ts.getScreenshotAs(OutputType.FILE);

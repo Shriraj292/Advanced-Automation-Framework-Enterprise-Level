@@ -12,6 +12,12 @@ import org.testng.ISuiteListener;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+/**
+ * ListenersClass looks for certain events and performs actions for those events
+ * as defined in this class.
+ * 
+ * @author Shriraj Ghorpade
+ */
 public class ListenersClass implements ITestListener, ISuiteListener {
 
 	@Override

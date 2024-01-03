@@ -14,6 +14,11 @@ import org.opencart.exceptions.InvalidPropertyKeyException;
 import org.opencart.exceptions.PropertyKeyNullException;
 import org.opencart.exceptions.PropertyValueEmptyException;
 
+/**
+ * PropertyUtilities class fetches the data from properties file.
+ * 
+ * @author Shriraj Ghorpade
+ */
 public final class PropertyUtilities {
 
 	private PropertyUtilities() {
@@ -35,6 +40,13 @@ public final class PropertyUtilities {
 		}
 	}
 
+	/**
+	 * This method accepts the property key as ConfigProperties enum variable and
+	 * returns the string value of the key.
+	 * 
+	 * @param key - key mentioned in properties file.
+	 * @return String value of key.
+	 */
 	public static String getPropertyValue(ConfigProperties key) {
 		if (Objects.isNull(key)) {
 			throw new PropertyKeyNullException("Property key is null. Please mention valid key.");

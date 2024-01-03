@@ -2,6 +2,11 @@ package org.opencart.reports;
 
 import com.aventstack.extentreports.ExtentTest;
 
+/**
+ * ExtentReportManager class is responsible for thread safety of extent test.
+ * 
+ * @author Shriraj Ghorpade
+ */
 public final class ExtentReportManager {
 
 	private ExtentReportManager() {

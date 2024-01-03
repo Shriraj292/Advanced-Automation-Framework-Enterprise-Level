@@ -14,11 +14,23 @@ import org.opencart.constants.FrameworkConstants;
 import org.opencart.exceptions.FileOperationsFailedException;
 import org.opencart.exceptions.InvalidExcelPathException;
 
+/**
+ * ExcelUtilities class fetches the data from excel sheet.
+ * 
+ * @author Shriraj Ghorpade
+ */
 public final class ExcelUtilities {
 
 	private ExcelUtilities() {
 	}
 
+	/**
+	 * This method accepts the sheetname from which testdata is to be fetched. The
+	 * data is returned as list of maps.
+	 * 
+	 * @param sheetName - sheet from which data is to be fetched
+	 * @return List of maps
+	 */
 	public static List<Map<String, String>> getData(String sheetName) {
 		List<Map<String, String>> list = null;
 

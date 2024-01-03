@@ -1,5 +1,11 @@
 package org.opencart.exceptions;
 
+/**
+ * Thrown when null is passed where valid property key is required.
+ * 
+ * @author Shriraj Ghorpade
+ * @see {@link FrameworkExceptions}
+ */
 @SuppressWarnings("serial")
 public class PropertyKeyNullException extends FrameworkExceptions {
 

@@ -9,6 +9,14 @@ import org.opencart.utilities.DataProviderUtilities;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+/**
+ * This is a sample test class. All test classes should extend {@link BaseTest}.
+ * All the methods mentioned in the test classes should follow same method
+ * signature as mentioned in this class.
+ * 
+ * @author Shriraj Ghorpade
+ * @see {@link BaseTest}
+ */
 public class LoginLogoutRegistration extends BaseTest {
 	private LoginLogoutRegistration() {
 	}

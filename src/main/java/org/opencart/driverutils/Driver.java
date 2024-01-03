@@ -8,11 +8,25 @@ import org.opencart.exceptions.BrowserInitializationFailedException;
 import org.opencart.utilities.PropertyUtilities;
 import org.openqa.selenium.WebDriver;
 
+/**
+ * Driver class is responsible for driver invocation and quitting.
+ * 
+ * @author Shriraj Ghorpade
+ * @see {@link DriverManager}
+ * @see {@link DriverFactory}
+ */
 public final class Driver {
 
 	private Driver() {
 	}
 
+	/**
+	 * This method is responsible for driver initialization and making driver thread
+	 * safe.
+	 * 
+	 * @param browser - browser name
+	 * @param version - browser version
+	 */
 	public static void initializeDriver(String browser, String version) {
 		if (Objects.isNull(DriverManager.getDriver())) {
 			WebDriver driver;
@@ -29,6 +43,10 @@ public final class Driver {
 		}
 	}
 
+	/**
+	 * This method is responsible for quitting driver and removing driver instance
+	 * from Threadlocal.
+	 */
 	public static void quitDriver() {
 		if (Objects.nonNull(DriverManager.getDriver())) {
 			DriverManager.getDriver().quit();

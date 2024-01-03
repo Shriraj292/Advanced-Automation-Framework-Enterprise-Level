@@ -9,11 +9,25 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+/**
+ * ExplicitWaitFactory is wait factory class which implements explicit wait.
+ * 
+ * @author Shriraj Ghorpade
+ */
 public final class ExplicitWaitFactory {
 
 	private ExplicitWaitFactory() {
 	}
 
+	/**
+	 * This method accepts wait strategy and By locator for the element. Based on
+	 * the wait strategy, wait is applied for given time and returns web element.
+	 * 
+	 * @param strategy - wait strategy as per declared in
+	 *                 {@link org.opencart.enums.WaitStrategies}
+	 * @param by       - locator value for element
+	 * @return WebElement
+	 */
 	public static WebElement explicitlyWaitFor(WaitStrategies strategy, By by) {
 		WebElement element = null;
 		switch (strategy) {

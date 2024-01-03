@@ -13,11 +13,26 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+/**
+ * This class is a driver factory.
+ * 
+ * @author Shriraj Ghorpade
+ * @see {@link Driver}
+ */
 public final class DriverFactory {
 
 	private DriverFactory() {
 	}
 
+	/**
+	 * This method checks testmode (local/remote) and initializes driver based on
+	 * testmode, browser and version.
+	 * 
+	 * @param browser - browser name
+	 * @param version - browser version
+	 * @return
+	 * @throws MalformedURLException
+	 */
 	public static WebDriver getDriver(String browser, String version) throws MalformedURLException {
 		String testMode = PropertyUtilities.getPropertyValue(ConfigProperties.TESTMODE);
 		DesiredCapabilities cap = new DesiredCapabilities();
