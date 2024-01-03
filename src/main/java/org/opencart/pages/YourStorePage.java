@@ -51,8 +51,10 @@ public final class YourStorePage extends BasePage {
 	}
 
 	public Object hoverOverMenu_And_clickOnSubMenu(YourStorePage_Constants menu, YourStorePage_Constants subMenu) {
-		hoverOver(By.xpath(DynamicLocatorUtility.getXpath(menuNavBar, menu.getValue())),"navigation bar menu: " + menu.getValue(), true);
-		click(By.xpath(DynamicLocatorUtility.getXpath(menuDropDown, menu.getValue(), subMenu.getValue())), "submenu: ", true);
+		hoverOver(By.xpath(DynamicLocatorUtility.getXpath(menuNavBar, menu.getValue())),
+				"navigation bar menu: " + menu.getValue(), true);
+		click(By.xpath(DynamicLocatorUtility.getXpath(menuDropDown, menu.getValue(), subMenu.getValue())), "submenu: ",
+				true);
 
 		Object targetPageObj = null;
 		switch (subMenu.getValue().toLowerCase()) {
